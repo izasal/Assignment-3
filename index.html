@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="index2.css">
+    <link rel="icon" type="image" href="https://cdn-icons-png.flaticon.com/512/939/939992.png">
+    <!-- ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #f3f3f3;">
+    <!-- Converter: assignment conversion showign 3 units 9length, mass or temp). k to c, c-f, f-k-->
+    <!-- Grams:
+    <input type="text" id="num1";>
+    <button onclick="gTokg();">Convert</button>
+    Kilograms:
+    <input type="text" id="num2"> -->
+
+    <!-- Kelvin:
+    <input type="text" id="num1";>
+    <button onclick="KtoC();">Convert</button>
+    Celsius:
+    <input type="text" id="num2">
+    <br>
+
+    Celsius:
+    <input type="text" id="num3"; >
+    <button onclick="CtoF();">Convert</button>
+    Fahrenheit:
+    <input type="text" id="num4">
+    <br>
+
+    Fahrenheit:
+    <input type="text" id="num5"; >
+    <button onclick="FtoK();">Convert</button>
+    Kelvin:
+    <input type="text" id="num6">
+    <br><br><br><br> -->
+
+    <nav class="navbar navbar-expand-lg justify-content-center" style="background-color: #f3f3f3;">
+        <img class="mt-1" src="https://cdn-icons-png.flaticon.com/512/939/939992.png" style="width: 70px; height: 70px;">
+        <a class="navbar-brand mx-3 fs-2 pt-3" style="color: #ff4141;" href="#"><b>Convert <span style="color: rgb(101, 186, 225);">Temp</span></b></a>
+    </nav>
+    <br>
+
+    <div class="container rounded-4 p-5" style="background-color: #ff5050;">
+        <div class="row">
+            <div class="card1">
+                <div class="card-body" style="text-align: center;">
+                    <h3 class="mb-4" style="color: #f3f3f3;" >K → °C</h3>
+                    <h6 style="color: #f3f3f3;">Kelvin:</h>
+                    <input type="text" id="num1" placeholder="K";>
+                    <button class="btn btn-light m-3 mt-3" style="color: #ff4141;" onclick="KtoC();"><b>Convert</b></button>
+                    <button class="btn btn-light m-3 mt-3" style="color: #ff4141;" onclick="Clear();"><b>Clear</b></button>
+                    <br>
+                    Celsius:<h/6>
+                    <input type="text" id="num2" placeholder=" &deg;C">
+                    <br><br><hr>
+
+                    <h3 class="mb-4" style="color: #f3f3f3;" > °C → °F</h3>
+                    Celsius:
+                    <input type="text" id="num3" placeholder=" &deg;C"; >
+                    <button class="btn btn-light  m-3 mt-3" style="color: #ff4141;" onclick="CtoF();"><b>Convert</b></button>
+                    <button class="btn btn-light m-3 mt-3" style="color: #ff4141;" onclick="Clear2();"><b>Clear</b></button>
+                    <br>
+                    Fahrenheit:
+                    <input type="text" id="num4" placeholder=" &deg;F">
+                    <br><br><hr>
+    
+                    <h3 class="mb-4" style="color: #f3f3f3;" >°F → K:</h3>
+                    Fahrenheit:
+                    <input type="text" id="num5" placeholder=" &deg;F"; >
+                    <button class="btn btn-light  m-3 mt-3" style="color: #ff4141;"  onclick="FtoK();"><b>Convert</b></button>
+                    <button class="btn btn-light m-3 mt-3" style="color: #ff4141;" onclick="Clear3();"><b>Clear</b></button>
+                    <br>
+                    Kelvin:
+                    <input type="text" id="num6" placeholder="K">
+                    <br>
+
+                </div>
+                
+               
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- <div class="container" style="background-color: #faf3eb;">
+        <div class="row">
+            <div class="card1 col-12 col-md-10 offset-md-1 my-md-auto">
+                <div id="card-body">
+                    <form>
+                        <div class="row px-3">
+                            <div class="col-12 col-md-11 px-4">
+                                <h5>Enter temperature for conversion: </h5>
+                                <label for="NUM">From:</label>
+                                <div class="num1-group">
+                                    <input type="number" id= "num1" placeholder="Enter temperature">
+                                        <select id="unit">
+                                            <option value="celsius">Celsius &deg;C</option>
+                                            <option value="fahrenheit">Fahrenheit &deg;F</option>
+                                            <option value="kelvin">Kelvin K</option>
+                                        </select>
+                                </div>
+                                <br>
+                                <label for="NUM">To:</label>
+                                <div class="num2-group">
+                                    <input type="number" id= "num1" placeholder="Enter temperature">
+                                        <select id="unit">
+                                            <option value="celsius">Celsius &deg;C</option>
+                                            <option value="fahrenheit">Fahrenheit &deg;F</option>
+                                            <option value="kelvin">Kelvin K</option>
+                                        </select>
+                                </div>
+                                <br>
+                                <button onclick="KtoC();">Convert</button>
+                                <button id="reset">Reset</button>
+                
+                                <div id="result"></div>
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <script src="index2.js"></script>
+</body>
+</html>
